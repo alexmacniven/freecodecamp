@@ -287,3 +287,465 @@ Just like using a textual element as an anchors text in section [Nest an Anchor 
   <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
 </main>
 ```
+
+---
+
+## Create a Bulleted Unordered List
+
+Unordered lists are created using the `<ul>` element.
+Each item in the unordered list is created using the `<li>` element.
+Both these elements need opening and closing tags.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+<ul>
+  <li>Eating</li>
+  <li>Sleeping</li>
+  <li>Shitting</li>
+</ul>
+</main>
+```
+
+---
+
+## Create an Ordered List
+
+In a similar fashion, ordered lists are created using the `<ol>` element.
+And these lists are populated using `<li>` items.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>dogs</li>
+    <li>birds</li>
+    <li>other cats</li>
+  </ol>
+</main>
+```
+
+---
+
+### Building Forms
+
+## Create a Text Field
+
+A text field allows the input of data.
+It's created using the `<input type="text">` element.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+  <input type="text">
+</main>
+```
+
+---
+
+## Add Placeholder Text to a Text Field
+
+Placeholder text is text displayed in the text box before a user has had a chance to input anything.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+  <input type="text" placeholder="cat photo URL">
+</main>
+```
+
+---
+
+## Create a Form Element
+
+The underlying purpose of a form is to send data to a web server or backend.
+The `action` attribute describes where to send the form data.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+  <form action="/submit-cat-photo">
+    <input type="text" placeholder="cat photo URL">
+  </form>
+</main>
+```
+
+---
+
+## Add a Submit Button to a Form
+
+A button element with the attribute `type` value as `submit` will send the data to the URI described by `form action`.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+  <form action="/submit-cat-photo">
+    <input type="text" placeholder="cat photo URL">
+    <button type="submit">Submit</button>
+  </form>
+</main>
+```
+
+---
+
+## Use HTML5 to Require a Field
+
+Adding `required` to an `input` element signifies the field must not be empty.
+When a required field is empty, the form will not be able to execute it's submit action.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+  <form action="/submit-cat-photo">
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+</main>
+```
+
+---
+
+## Create a Set of Radio Buttons
+
+Radio buttons are a type of `input`.
+They usually appear in groups, and require a couple of extra elements to work effectively.
+
+A radio button is nested within it's own `label`.
+Radio buttons are usually grouped, where only one radio in the group can be selected at a time.
+Organise radio buttons into groups using the `input` elements `name` attribute.
+
+It's good practice to use a `for` attribute when creating the `label` element.
+The `for` value should match an `id` value of the `input` element.
+The reason, to aid assertive technologies create a link betweek the `label` and the `input`.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+  <form action="/submit-cat-photo">
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  <label for ="indoor">
+    <input id="indoor" type="radio" name="indoor-outdoor">Indoor
+  </label>
+  <label for="outdoor">
+    <input id="outdoor" type="radio" name="indoor-outdoor">outdoor
+  </label>
+  </form>
+</main>
+```
+
+---
+
+## Create a Set of Checkboxes
+
+Checkboxes are a type of input.
+They usually appear in groups, and require a couple of extra element to work effectively.
+
+A checkbox is nested within it's own `label`.
+Checkboxes can be grouped, and allow for multiple options to be selectable.
+Organise checkboxes into groups using the `name` attribute.
+
+It's good practice to use a `for` attribute when creating the `label` element.
+The `for` value should match an `id` value of the `input` element.
+The reason, to aid assertive technologies create a link between the `label` and the `input`.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+  <form action="/submit-cat-photo">
+    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"> Indoor</label>
+    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+    <label for="loving">
+      <input id="loving" type="checkbox" name="personality">loving
+    </label>
+    <label for="aggressive">
+      <input id="aggressive" type="checkbox" name="personality">aggressive
+    </label>
+    <label for="intelligent">
+      <input id="intelligent" type="checkbox" name="personality">intelligent
+    </label>
+  </form>
+</main>
+```
+
+---
+
+## Use the Value Attribute with Radio Buttons and Checkboxes
+
+When submitting form data, a `name` value is sent along with the `value` value.
+E.g. `<input id="indoor" type="radio" name="indoor-outdoor" value="indoor">` -> `indoor-outdoor=indoor`
+When no `value` is specified a default of `on` is used.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+  
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+  <form action="/submit-cat-photo">
+    <label><input type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
+    <label><input type="checkbox" name="personality" value="loving"> Loving</label>
+    <label><input type="checkbox" name="personality" value="lazy"> Lazy</label>
+    <label><input type="checkbox" name="personality" value="energetic"> Energetic</label><br>
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+</main>
+```
+
+---
+
+## Check Radio Buttons and Checkboxes by Default
+
+Add the `checked` attribute to the element for it to be checked by default.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+  <form action="/submit-cat-photo">
+    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
+    <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>
+    <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
+    <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br>
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+</main>
+```
+
+---
+
+## Nest Many Elements with a Single `div` Element
+
+Divisional elements are used to group logical elements together.
+They are widely used in HTML.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <div>
+    <p>Things cats love:</p>
+    <ul>
+      <li>cat nip</li>
+      <li>laser pointers</li>
+      <li>lasagna</li>
+    </ul>
+    <p>Top 3 things cats hate:</p>
+    <ol>
+      <li>flea treatment</li>
+      <li>thunder</li>
+      <li>other cats</li>
+    </ol>
+  </div>
+
+  <form action="/submit-cat-photo">
+    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
+    <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>
+    <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
+    <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br>
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+</main>
+```
+
+---
+
+## Declare the DocType of an HTML Document
+
+The doctype element is part of the HTML boilerplate.
+All HTML documents require the follwing `!DOCTYPE` and `html` elements.
+
+```html
+<!-- `html` is case sensitive -->
+<!DOCTYPE html>
+<html>
+    <h1>Kapow!</h1>
+</html>
+```
+
+---
+
+## Define the Head and Body of an HTML Document
+
+An HTML document can be organised further.
+Information about the document (meta data) is nested in the `head`.
+The document content resides in the `body`.
+Elements such as `link`, `meta`, `title` and `style` go in the `head`.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>The best page ever</title>
+  </head>
+  <body>
+  <h1>The best page ever</h1>
+  <p>Cat ipsum dolor sit amet, jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed. Go into a room to decide you didn't want to be in there anyway. I like big cats and i can not lie kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Meow i could pee on this if i had the energy for slap owner's face at 5am until human fills food dish yet scamper. Knock dish off table head butt cant eat out of my own dish scratch the furniture. Make meme, make cute face. Sleep in the bathroom sink chase laser but pee in the shoe. Paw at your fat belly licks your face and eat grass, throw it back up kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+  </body>
+</html>
+```
