@@ -50,3 +50,22 @@ Luckily we can use a `<style>` block and specify attributes for HTML elements li
 ```
 Note the syntax of the style block, each selector is opened and closed with braces.
 
+---
+
+## Use a CSS Class to Style an Element
+
+Use classes to add resuable styles across HTML elements.
+A common case is where we don't want *all* `h2` elements to be red.
+Create a class and all elements with the specified class will use it's declarations.
+
+```html
+<style>
+  .red-text {
+    color: red;
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+```
+Note: all CSS classes start with `.` e.g. `.red-text`.
+But we omit the `.` when the HTML element is referencing the class.
