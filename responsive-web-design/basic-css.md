@@ -21,3 +21,16 @@ It also allows the style to be changed without modifying the content and structu
 
 With CSS a HTML element in the DOM (Document Object Model) is targetted and a variety of it's attributes are changed.
 
+---
+
+## Change the Color of Text
+
+Use an elements `style` attribute to change it's color.
+Note the `;` when closing the string attribute, this is good practice.
+
+This is an example of basic inline CSS.
+
+```html
+<h2 style="color: red;">CatPhotoApp</h2>
+```
+
