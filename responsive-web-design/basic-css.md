@@ -34,3 +34,19 @@ This is an example of basic inline CSS.
 <h2 style="color: red;">CatPhotoApp</h2>
 ```
 
+---
+
+## Use CSS Selectors to Style Elements
+
+Imagine having to do that 👆 for *each* HTML element, large projects would soon become unmanagable.
+Luckily we can use a `<style>` block and specify attributes for HTML elements like `h2` using selectors.
+
+```html
+<style>
+  h2 {
+    color: blue;
+  }
+</style
+```
+Note the syntax of the style block, each selector is opened and closed with braces.
+
