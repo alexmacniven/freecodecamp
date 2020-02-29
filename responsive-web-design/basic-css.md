@@ -69,3 +69,20 @@ Create a class and all elements with the specified class will use it's declarati
 ```
 Note: all CSS classes start with `.` e.g. `.red-text`.
 But we omit the `.` when the HTML element is referencing the class.
+
+---
+
+## Use an id Attribute to Style an Element
+
+Like classes, they can be used to style with CSS.
+An `id` is not resusable, it can only be used on a single element.
+However it does have a higher importance than a class; if an element has an `id` and a `class` then the `id` declaration will take priority.
+When specifying an `id` declaration in the CSS, start them with a `#`
+
+```html
+<style>
+  #cat-photo-form {
+    background-color: green;
+  }
+</style>
+```
