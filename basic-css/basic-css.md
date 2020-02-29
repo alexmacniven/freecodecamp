@@ -86,3 +86,66 @@ When specifying an `id` declaration in the CSS, start them with a `#`
   }
 </style>
 ```
+
+---
+
+## Adjust the Padding of an Element
+
+Elements are essentially recangles on a canvas.
+There are three important elements that can be used to control the space around an element; `padding`, `margin` and `border`.
+
+`padding` controls the space between the elements content and the border
+
+```html
+<style>
+  .injected-text {
+    margin-bottom: -25px;
+    text-align: center;
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+  .yellow-box {
+    background-color: yellow;
+    padding: 10px;
+  }
+
+  .red-box {
+    background-color: crimson;
+    color: #fff;
+    padding: 20px;
+  }
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+  }
+</style>
+<h5 class="injected-text">margin</h5>
+
+<div class="box yellow-box">
+  <h5 class="box red-box">padding</h5>
+  <h5 class="box blue-box">padding</h5>
+</div>
+```
+![element with 10px padding][element_10_padding]
+
+```html
+<style>
+    .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+  }
+</style>
+```
+![element with 20px padding][element_20_padding]
+
+[element_10_padding]: ./assets/element_padding_01.png
+[element_20_padding]: ./assets/element_padding_02.png
