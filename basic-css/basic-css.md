@@ -214,8 +214,41 @@ An element can *grow* larger by changing it's `mwrgin` to a negative value.
 ```
 ![margin -15][margin_-15]
 
+---
+
+## Add Different Padding to Each Side of an Element
+
+Padding can be assigned different values to different sides of an element using;
+ - `padding-top`
+ - `padding-right`
+ - `padding-bottom`
+ - `padding-left`
+
+```html
+   .red-box {
+    background-color: crimson;
+    color: #fff;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+  }
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+  }
+```
+
+![padding 40 20][padding_40_20]
+
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
 [margin_20]: ./assets/margin_20.png
 [margin_10]: ./assets/margin_10.png
 [margin_-15]: ./assets/margin_-15.png
+[padding_40_20]: ./assets/padding_40_20.png
