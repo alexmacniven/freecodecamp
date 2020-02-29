@@ -193,7 +193,29 @@ Note how the red box appears smaller due to it's greater margin value.
 
 ---
 
+## Add a Negative Margin to an Element
+
+An element can *grow* larger by changing it's `mwrgin` to a negative value.
+
+```html
+  .red-box {
+    background-color: crimson;
+    color: #fff;
+    padding: 20px;
+    margin: -15px;
+  }
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+  }
+```
+![margin -15][margin_-15]
+
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
 [margin_20]: ./assets/margin_20.png
 [margin_10]: ./assets/margin_10.png
+[margin_-15]: ./assets/margin_-15.png
