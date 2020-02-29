@@ -147,5 +147,53 @@ There are three important elements that can be used to control the space around 
 ```
 ![element with 20px padding][element_20_padding]
 
+---
+
+## Adjust the Margin of an Element
+
+An elements `margin` property controls the space between it's border and the elements surrounding elements.
+
+```html
+  .red-box {
+    background-color: crimson;
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+  }
+```
+
+Note how the red box appears smaller due to it's greater margin value.
+
+![margin 20][margin_20]
+
+
+```html
+  .red-box {
+    background-color: crimson;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+  }
+```
+![margin 10][margin_10]
+
+---
+
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
+[margin_20]: ./assets/margin_20.png
+[margin_10]: ./assets/margin_10.png
