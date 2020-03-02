@@ -246,9 +246,77 @@ Padding can be assigned different values to different sides of an element using;
 
 ![padding 40 20][padding_40_20]
 
+---
+
+## Add Different Margins to Each Side of an Element
+
+As with `padding` define a value to each side of the element's `margin` using the selectors `margin-top`, `margin-right`, etc.
+
+```html
+  .blue-box {
+      background-color: blue;
+      color: #fff;
+      margin-top: 40px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      margin-right: 40px;
+  }
+```
+
+---
+
+## Use Clockwise Notation to Specify the Padding or Margin of an Element
+
+Specify all the values using a one-liner; `padding: 10px 20px 10px 20px;`
+
+```html
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 40px 20px 20px 40px;
+  }
+```
+
+```html
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    margin: 40px 20px 20px 40px;
+  }
+```
+
+---
+
+## Use Attribute Selectors to Style Elements
+
+Specify all elements where the attribute `type` has the value `radio`
+
+```html
+  [type='radio'] {
+    ...
+  }
+```
+
+---
+
+## Absolute vs. Relative Units
+
+So far we've used `px` this is a fixed measurement, absolute.
+
+A relative unit value sets the measurement relative to another value. For example `em` sets the value relative to the elements `font-size`. 
+Note; when using `em` to set the size of a `font-size` the parent elements `font-size` is used for the relative measurement.
+
+```css
+  .red-box {
+    background-color: red;
+    margin: 20px 40px 20px 40px;
+    padding: 1.5em;
+  }
+```
+
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
 [margin_20]: ./assets/margin_20.png
 [margin_10]: ./assets/margin_10.png
 [margin_-15]: ./assets/margin_-15.png
-[padding_40_20]: ./assets/padding_40_20.png
+[padding_40_20]: ./assets/padding_40_20.png 
