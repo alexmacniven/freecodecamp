@@ -287,6 +287,17 @@ Specify all the values using a one-liner; `padding: 10px 20px 10px 20px;`
 
 ---
 
+## Use Attribute Selectors to Style Elements
+
+Specify all elements where the attribute `type` has the value `radio`
+
+```html
+  [type='radio'] {
+    ...
+  }
+```
+
+
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
 [margin_20]: ./assets/margin_20.png
