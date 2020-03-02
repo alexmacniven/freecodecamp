@@ -246,9 +246,26 @@ Padding can be assigned different values to different sides of an element using;
 
 ![padding 40 20][padding_40_20]
 
+## Add Different Margins to Each Side of an Element
+
+As with `padding` define a value to each side of the element's `margin` using the selectors `margin-top`, `margin-right`, etc.
+
+```html
+  .blue-box {
+      background-color: blue;
+      color: #fff;
+      margin-top: 40px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      margin-right: 40px;
+  }
+```
+
+
+
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
 [margin_20]: ./assets/margin_20.png
 [margin_10]: ./assets/margin_10.png
 [margin_-15]: ./assets/margin_-15.png
-[padding_40_20]: ./assets/padding_40_20.png
+[padding_40_20]: ./assets/padding_40_20.png 
