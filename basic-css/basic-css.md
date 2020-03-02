@@ -265,7 +265,7 @@ As with `padding` define a value to each side of the element's `margin` using th
 
 ---
 
-## Use Clockwise Notation to Specify the Padding of an Element
+## Use Clockwise Notation to Specify the Padding or Margin of an Element
 
 Specify all the values using a one-liner; `padding: 10px 20px 10px 20px;`
 
@@ -277,7 +277,15 @@ Specify all the values using a one-liner; `padding: 10px 20px 10px 20px;`
   }
 ```
 
+```html
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    margin: 40px 20px 20px 40px;
+  }
+```
 
+---
 
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
