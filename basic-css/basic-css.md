@@ -297,6 +297,22 @@ Specify all elements where the attribute `type` has the value `radio`
   }
 ```
 
+---
+
+## Absolute vs. Relative Units
+
+So far we've used `px` this is a fixed measurement, absolute.
+
+A relative unit value sets the measurement relative to another value. For example `em` sets the value relative to the elements `font-size`. 
+Note; when using `em` to set the size of a `font-size` the parent elements `font-size` is used for the relative measurement.
+
+```css
+  .red-box {
+    background-color: red;
+    margin: 20px 40px 20px 40px;
+    padding: 1.5em;
+  }
+```
 
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
