@@ -164,7 +164,8 @@ An elements `margin` property controls the space between it's border and the ele
   .blue-box {
     background-color: blue;
     color: #fff;
-    padding: 20px;
+   
+   padding: 20px;
     margin: 10px;
   }
 ```
@@ -313,6 +314,30 @@ Note; when using `em` to set the size of a `font-size` the parent elements `font
     padding: 1.5em;
   }
 ```
+
+---
+
+## Inheriting Styles
+
+Define some definitions for the `body` element;
+
+```css
+  body {
+    background-color: black;
+    color: green;
+    font-family: monospace;
+  }
+```
+
+Now when a `h1` element is added, it will **inherit from** the `body` definitions because the `body` and `h1` have a **parent -> child** relationship.
+
+```html
+<body>
+  <h1></h1>
+</body>
+```
+
+Every element defined inside the `body` element will inherit from `body`.
 
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
