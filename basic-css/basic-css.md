@@ -339,6 +339,81 @@ Now when a `h1` element is added, it will **inherit from** the `body` definition
 
 Every element defined inside the `body` element will inherit from `body`.
 
+## Overriding Styles
+
+Define a class which we'll apply to the `h1`;
+
+```css
+  .pink-text {
+    color: pink;
+  }
+```
+
+```html
+<body>
+  <h1 class="pink-text"></h1>
+</body>
+```
+
+Even though the `color` attribute is still inherited from `body` the `pink-text` takes priority.
+
+Like class inheritence in programming; a member defined for the class will override an inherited member.
+
+What if we gave `h1` two class declarations?
+
+```css
+  .pink-text {
+    color: pink;
+  }
+  .blue-text {
+    color: blue;
+  }
+```
+
+```html
+<body>
+  <h1 class="pink-text blue-text"></h1>
+</body>
+```
+**The text colour will appear blue because `blue-text` appears last in the css declarations.**
+
+The order in which the classes appear in the `html` is unimportant.
+
+Now let's add `id` into the mix.
+
+```css
+  #orange-text {
+    color: orange;
+  }
+```
+
+```html
+<body>
+  <h1 class="pink-text blue-text" id="orange-text"></h1>
+</body>
+```
+
+**The text colour will appear orange as an `id` overrides any/all `class`.**
+
+It's possible to override `id` declarations with *inline styles*.
+
+```html
+ <h1 class="pink-text blue-text" id="orange-text" style="color: white;"></h1>
+```
+
+**The text colour will appear white as an inline style overrides `id` and `class`.**
+
+There is an all-powerful way to override any styling made to an element, using `!important`;
+
+```css
+  .pink-text {
+    color: pink !important;
+  }
+```
+
+**!important overrides any/all other styling declarations.**
+
+
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
 [margin_20]: ./assets/margin_20.png
