@@ -527,6 +527,27 @@ Note the fallback value (of blue) provided when the variable reference fails;
   }
 ```
 
+---
+
+## Improve Compatibility with Fallbacks
+
+When a browser doesn't understand a property, it will ignore it and attempt to use a fallback until it hits the default value.
+
+A common way to implement fallbacks is to declare them *before* the intended values;
+
+```css
+.red-box {
+    background: red;
+    background: var(--red-color);
+    height: 200px;
+    width:200px;
+  }
+```
+
+A browser will use the initial value then, if the browser supports it, will override with the next value.
+
+
+
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
 [margin_20]: ./assets/margin_20.png
