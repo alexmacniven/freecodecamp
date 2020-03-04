@@ -596,6 +596,32 @@ Of course, these variables can be overridden in class declarations;
 
 When an element `square` descends from `shape` the `--color` variable will use the value `blue`.
 
+---
+
+## Changing Variables with Media Queries
+
+Variables simplify using media quieres.
+
+```css
+  :root {
+    --size: 300px;
+    --color: blue;
+  }
+  @media (max-width: 350px) {
+    :root {
+      --size: 200px;
+      --color: red;
+    }
+  }
+  .square {
+    width: var(--size);
+    height: var(--size);
+    background-color: --color;
+  }
+```
+
+By default the values from `:root` are used. But when the media viewport (browser) is lower than 350px in width then the values in the `@media` definitions are used.
+
 
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
