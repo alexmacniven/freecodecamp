@@ -546,6 +546,55 @@ A common way to implement fallbacks is to declare them *before* the intended val
 
 A browser will use the initial value then, if the browser supports it, will override with the next value.
 
+---
+
+## Inherit CSS Variables
+
+When CSS variables are assigned they are avaiable to the selector and any element descending from it;
+
+```css
+  .parent {
+    --color: red;
+  }
+  .child {
+    background-color: black;
+    color: var(--color);
+  }
+```
+
+```html
+<div class="parent">
+  <div class="child"></div>
+</div>
+```
+
+The `--color` variable is available to the `child` class.
+
+To make variables accessible throughout, add them to `:root`.
+
+`:root` is a psuedo-class matching the root element of the document.
+
+```css
+  :root {
+    --color: green;
+  }
+```
+
+Of course, these variables can be overridden in class declarations;
+
+```css
+  :root {
+    --color: green;
+  }
+  .shape {
+    --color: blue;
+  }
+  .square {
+    background-color: var(--color);
+  }
+```
+
+When an element `square` descends from `shape` the `--color` variable will use the value `blue`.
 
 
 [element_10_padding]: ./assets/element_padding_01.png
