@@ -464,6 +464,34 @@ Browser interprets `#F00` as `#FF0000`, `#F0F` as `#FF00FF` provides a slimmed d
 [Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)  
 [RGB Color Model](https://en.wikipedia.org/wiki/RGB_color_model)
 
+--- 
+
+## RGB Color Codes
+
+Define color using a 3 item set of 3 digits, representing red, green, and blue.
+
+```css
+  body {
+    background-color: rgb(255, 165, 0);
+  }
+```
+
+The limit for each color set is 0 - 255, meaning there are the same number of color combinations as available in the hex system (above).
+
+```css
+.red-text {
+  color: rgb(255, 0, 0);
+}
+.orchid-text {
+  color: rgb(218, 112, 214);
+}
+.sienna-text {
+  color: rgb(160, 82, 45);
+}
+.blue-text {
+  color: rgb(0, 0, 255);
+}
+```
 
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
