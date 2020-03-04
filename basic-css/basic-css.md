@@ -413,6 +413,57 @@ There is an all-powerful way to override any styling made to an element, using `
 
 **!important overrides any/all other styling declarations.**
 
+---
+
+## Hex Color Codes
+
+Define colors with hex codes instead of their named values, allowing for a vast range of colors to work with.
+
+```css
+  body {
+    background-color: #000000;
+  }
+```
+
+There are approx 16 000 000 colors to choose from;
+
+```css
+.red-text {
+    color: #FF0000;
+  }
+  .green-text {
+    color: #00FF00;
+  }
+  .dodger-blue-text {
+    color: #1E90FF;
+  }
+  .orange-text {
+    color: #FFA500;
+  }
+```
+
+Abbreviate hex codes using three-characters;
+
+```css
+.red-text {
+    color: #F00;
+  }
+  .fuchsia-text {
+    color: #F0F;
+  }
+  .cyan-text {
+    color: #0FF;
+  }
+  .green-text {
+    color: #0F0;
+  }
+```
+
+Browser interprets `#F00` as `#FF0000`, `#F0F` as `#FF00FF` provides a slimmed down palette but is a lot easier to remember!
+
+[Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)  
+[RGB Color Model](https://en.wikipedia.org/wiki/RGB_color_model)
+
 
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
