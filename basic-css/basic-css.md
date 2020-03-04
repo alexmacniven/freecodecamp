@@ -493,6 +493,40 @@ The limit for each color set is 0 - 255, meaning there are the same number of co
 }
 ```
 
+---
+
+## CSS Variables
+
+Offer a powerful mechanism for controlling multiple declarations;
+
+```css
+  .shapes {
+    --color: red;
+  }
+  .top-shape {
+    background-color: var(--color; blue);
+  }
+  .bottom-shape {
+    background-color: var(--color; green);
+  }
+```
+
+```html
+<div class="shapes">
+  <div class="top-shape"></div>
+  <div class="bottom-shape"></div>
+</div>
+```
+
+In `shapes` a variable called `--color` is created, the variable can now be used elsewhere in the CSS to define values.
+
+Note the fallback value (of blue) provided when the variable reference fails;
+```css
+  .top-shape {
+    background-color: var(--color; blue)
+  }
+```
+
 [element_10_padding]: ./assets/element_padding_01.png
 [element_20_padding]: ./assets/element_padding_02.png
 [margin_20]: ./assets/margin_20.png
