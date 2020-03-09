@@ -41,3 +41,15 @@ Wrap text in `<strong>` tags to apply `font-weight: bold;` to it.
         Get ready for some <strong>bold text</strong>.
     </p>
 ```
+
+## underline
+
+Like the `strong` tag, use the `u` tag to underline text
+
+*Use with caution; underlined text often denotes a link*
+
+```html
+    <p>
+        Here comes some <u>underlines</u>.
+    </p>
+```
