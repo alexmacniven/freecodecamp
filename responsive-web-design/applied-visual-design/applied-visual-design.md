@@ -53,3 +53,13 @@ Like the `strong` tag, use the `u` tag to underline text
         Here comes some <u>underlines</u>.
     </p>
 ```
+
+## italic
+
+Use the `<em>` tag to make wrapped text italic.
+
+```html
+    <p>
+        Now for some <em>italics</em>.
+    </p>
+```
