@@ -21,3 +21,13 @@ img{
   width: 220px;
 }
 ```
+
+## height
+
+Likewise, with the `height` element property.
+
+```css
+h4{
+    height: 25px;
+}
+```
