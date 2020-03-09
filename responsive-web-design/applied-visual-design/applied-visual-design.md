@@ -11,3 +11,13 @@ Controls how text is aligned in it's element.
 ```css
     text-align: center;
 ```
+
+## width
+
+`width` values can be supplied as relative (`em`), absolute (`px`) or as a percentage of it's containing parent.
+
+```css
+img{
+  width: 220px;
+}
+```
