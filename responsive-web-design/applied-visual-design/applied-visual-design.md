@@ -63,3 +63,13 @@ Use the `<em>` tag to make wrapped text italic.
         Now for some <em>italics</em>.
     </p>
 ```
+
+## strikethrough
+
+This effect is added using the `<s>` tag.
+
+```html
+    <p>
+        This is <s>strikethrough</s>.
+    </p>
+```
