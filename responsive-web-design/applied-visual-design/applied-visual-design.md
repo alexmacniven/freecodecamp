@@ -31,3 +31,13 @@ h4{
     height: 25px;
 }
 ```
+
+## strong (bold)
+
+Wrap text in `<strong>` tags to apply `font-weight: bold;` to it.
+
+```html
+    <p>
+        Get ready for some <strong>bold text</strong>.
+    </p>
+```
