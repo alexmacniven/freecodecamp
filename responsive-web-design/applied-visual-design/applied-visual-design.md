@@ -73,3 +73,20 @@ This effect is added using the `<s>` tag.
         This is <s>strikethrough</s>.
     </p>
 ```
+
+## horizonatal rule
+```html
+    <hr />
+```
+
+## rgba colour
+Change the background colour of the element using rgba;
+```css
+    h4{
+        background-color: rgba(45, 45, 45, 0.1);
+    }
+```
+(r)ed, (g)reen, (b)lue, (a)lpha
+
+font size of `<h*>` tags should *always* be bigger than `<p>` tags
+
