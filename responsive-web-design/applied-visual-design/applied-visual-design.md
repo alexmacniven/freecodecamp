@@ -90,3 +90,36 @@ Change the background colour of the element using rgba;
 
 font size of `<h*>` tags should *always* be bigger than `<p>` tags
 
+## box shadow
+```css
+    box-shadow: 0, 10px, 20px, rgba(0, 0, 0, 0.19);
+```
+- values
+    - offsex-x -> horizontal push
+    - offset-y -> vertical push
+    - blue-radius (opt)
+    - spread radius (opt)
+    - color
+
+- multiple box shadows can be combined, separated by comma
+    ```css
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    ```
+
+# opacity
+```css
+opacity: 0.7;
+```
+- ranges from 1 (solid) to 0 (transparant)
+
+# text-transform
+- values
+    - lowercase -> "transform me"
+    - uppercase -> "TRANSFORM ME"
+    - capitalize -> "Transform Me"
+    - initial -> use default
+    - inherit -> use parent
+    - none -> use none (default)
+- makes all text on page consistent
+
+
