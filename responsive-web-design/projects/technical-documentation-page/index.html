@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FCC: Technical Documentation</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header><h1>The Shushi Documention</h1></header>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#the_cli">The CLI</a></li>
+            <li><a href="#the_api">The API</a></li>
+            <li><a href="#environment_variables">Environment Variables</a></li>
+            <li><a href="#contribute">Contribute</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="introduction" class="main-section">
+            <header><h2>Introduction</h2></header>
+            <article>
+                <p>
+                    Minimalist secrets management in Python for Windows.
+                </p>
+                <p>
+                    Shushi was built to address the need for a one-stop storage location for sensitive data.
+                    Instead of having your credentials scattered across your projects in multiple config files, 
+                    Shushi offers an encrypted vault with access via a CLI application and an API.
+                </p>
+            </article>
+        </section>
+        <section id="installation" class="main-section">
+            <header><h2>Installation</h2></header>
+            <article>
+                <p>
+                    You'll need the following;
+                </p>
+                <ul>
+                    <li>Python 3.7 or above</li>
+                </ul>
+                <p>
+                    We also recommend using virtualenv, you can read more on the <a>virtualenv webpage</a>;
+                </p>
+                <code>
+                    > virtualenv .env
+                </code>
+                <p>
+                    You can then install via pip;
+                </p>
+                <code>
+                    > pip install shushi
+                </code>
+            </article>
+        </section>
+        <section id="the_cli" class="main-section">
+            <header><h2>The CLI</h2></header>
+            <p>The command-line interface comes complete with the follwing commands</p>
+            <article>
+                <h3>make</h3>
+                <p>Creates a new vault at <code>SHUSHI_DATA</code>.</p>
+                <code>
+                    > shushi -p [password] make
+                </code>
+            </article>
+            <article>
+                <h3>add</h3>
+                <p>Opens an interface for creating a new vault item.</p>
+                <code>
+                    > shushi -p [password] add [name]
+                </code>
+            </article>
+            <article>
+                <h3>get</h3>
+                <p>Returns a named item from the vault if it exists.</p>
+                <code>
+                    > shushi -p [password] get [name]
+                </code>
+            </article>
+            <article>
+                <h3>remove</h3>
+                <p>Removes a named item from the vault.</p>
+                <code>
+                    > shushi -p [password] remove [name]
+                </code>
+            </article>
+            <article>
+                <h3>list</h3>
+                <p>Lists all names of items in the vault</p>
+                <code>
+                    > shushi -p [password] list
+                </code>
+            </article>
+        </section>
+        <section id="the_api" class="main-section">
+            <header><h2>The API</h2></header>
+            <p>The API powering the Shushi CLI is open for use.</p>
+            <article>
+                <h3>make</h3>
+                <p>Creates a new vault at <code>SHUSHI_DATA</code>.</p>
+                <code>
+                    >>> import shushi<br>
+                    >>> shushi.make(password)
+                </code>
+                <p>Overwrite an existing vault by passing <code>force=True</code>.</p>
+                <code>
+                    >>> shushi.make(password, force=True)
+                </code>
+                <p><b>Note; this may lead to loss of your data.</b></p>
+            </article>
+            <article>
+                <h3>add</h3>
+                <p>Creates a new vault item.</p>
+                <code>
+                    >>> import shushi<br>
+                    >>> item = dict(name="facebook", user="joe", password="secret")<br>
+                    >>> shushi.add(item, password)
+                </code>
+                <p>A vault item is made up of any number of key-value pairs, however a <b>name must be supplied</b>.</p>
+                <p>Overwrite an existing vault item with the same name by passing <code>force=True</code>.</p>
+                <code>
+                    >>> shushi.add(item, password, force=True)
+                </code>
+                <p><b>Note; this may lead to loss of your data.</b></p>
+                <h4>Exceptions</h4>
+                <p>
+                    <code>KeyError</code>: when no name has been supplied.
+                </p>
+                <p>
+                    <code>ItemExists</code>: when the vault contains an item with the supplied name and <code>force != True</code>.
+                </p>
+            </article>
+            <article>
+                <h3>get</h3>
+                <p>Returns an item from the vault as a <code>VaultItem</code>.</p>
+                <code>
+                    >>> import shushi<br>
+                    >>> shushi.get("facebook", password)<br>
+                    VaultItem(name="facebook", user="joe bloggs", password="secret")<br>
+                </code>
+                <h4>Exceptions</h4>
+                <p>
+                    <code>ItemNotFound</code>: when no vault item matches the supplied name.
+                </p>
+            </article>
+            <article>
+                <h3>remove</h3>
+                <p>Removes an item from the vault.</p>
+                <code>
+                    >>> import shushi<br>
+                    >>> shushi.remove("facebook", password)
+                </code>
+                <h4>Exceptions</h4>
+                <p>
+                    <code>ItemNotFound</code>: when no vault item matches the supplied name.
+                </p>
+            </article>
+            <article>
+                <h3>list_names</h3>
+                <p>Returns a list of each vault items name.</p>
+                <code>
+                    >>> import shushi<br>
+                    >>> shushi.list_names(password)<br>
+                    ["facebook", "twitter"]
+                </code>
+            </article>
+        </section>
+        <section id="environment_variables" class="main-section">
+            <header><h2>Environment Variables</h2></header>
+            <p>Environment variables can be configured to modify the behaviour of the application.</p>
+            <article>
+                <h3>SHUSHI_PASSWORD</h3>
+                <p>When using the CLI, you can alleviate the need for supplying a password with every command.</p>
+                <p>
+                    Before;<br>
+                    <code>
+                        > shushi -p [password] get twitter
+                    </code>
+                </p>
+                <p>
+                    After;<br>
+                    <code>
+                        > shushi get twitter
+                    </code>
+                </p>
+                <p>Set the <code>SHUSHI_PASSWORD</code> for the local terminal session:</p>
+                <code>
+                    > Set-Item -Path Env:SHUSHI_PASSWORD -Value [password]
+                </code>
+            </article>
+            <article>
+                <h3>SHUSHI_DATA</h3>
+                <p>This variable references the path to the <i>current</i> vault.</p>
+                <p>It has the default value: <code>~/AppData/Roaming/Shushi/</code>.</p>
+                <p>Set the <code>SHUSHI_DATA</code> for the local terminal session:</p>
+                <code>
+                    > Set-Item -Path Env:SHUSHI_DATA -Value [path]
+                </code>                
+            </article>
+        </section>
+        <section id="contribute" class="main-section">
+            <header><h2>Contribute</h2></header>
+            <p>
+                The project is open to pull requests and if you're interested in working on shushi then follow 
+                these steps to contribute your code:
+            </p>
+            <ol>
+                <li>Fork the <a href="https://github.com/alexmacniven/shushi">Github repository</a></li>
+                <li>Setup your test environment (using a <code>virtualenv</code> is recommended)</li>
+                <li>Run the tests (all tests are written using the <a href="https://docs.pytest.org/en/latest/">pytest framework</a>)</li>
+                <li>Write tests to demonstrate your fix or feature</li>
+                <li>Make your change</li>
+                <li>Run all the tests again</li>
+                <li>Create a <a href="https://github.com/alexmacniven/shushi/compare">pull request</a> to master</li>
+            </ol>
+        </section>
+        <footer><p>&copy; 2020 Alex Macniven</p></footer>
+    </main>
+</body>
+</html>
