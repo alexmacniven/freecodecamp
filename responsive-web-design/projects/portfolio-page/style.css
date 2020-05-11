@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --skyb: #0378A6;
+    --blue: #363859;
+    --high: #0CA67D;
+    --dark: #011826;
+    --lite: #DDDDDD;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; 
+}
+
+main {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 3em;
+    margin: 0;
+}
+
+h2 {
+    width: 40%;
+    text-align: center;
+    border-bottom: 1px solid var(--lite);
+}
+
+h3 {
+    font-size: 2em;
+    text-align: center;
+    color: var(--blue);
+}
+
+
+#welcome-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: var(--lite);
+}
+
+#welcome-header {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+#welcome-content {
+    width: 400px;
+    margin-left: 50px;
+}
+
+#projects-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+#projects-header {
+    width: 100%;
+    font-weight: 600;
+    font-size: 2em;
+    color: var(--lite);
+    display: flex;
+    justify-content: center;
+    background: var(--blue);
+}
+
+#projects-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contact-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+}
+
+#contact-header {
+    width: 100%;
+    font-weight: 600;
+    font-size: 2em;
+    color: var(--lite);
+    display: flex;
+    justify-content: center;
+    background: var(--blue);
+}
+
+#contact-header h2 {
+    width: 40%;
+    text-align: center;
+    border-bottom: 1px solid var(--lite);
+}
+
+#avatar {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:var(--blue);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.nav-link {
+    margin: 12px 20px;
+    color: var(--lite);
+    text-decoration: none;
+}
+
+.flex-centered {
+    justify-content: center;
+    align-items: center;    
+}
+
+.photo-background {
+    background: #34495e url(assets/photography-of-night-sky-733475.jpg) center/100% 100% no-repeat fixed;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    background: var(--lite);
+}
+
+.card {
+    height: 100%;
+    width: 400px;
+}
