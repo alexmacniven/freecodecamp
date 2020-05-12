@@ -140,12 +140,49 @@ h3 {
     position: relative;
 }
 
-.content {
-    height: 100%;
-    width: 800px;
+.no-decor {
+    list-style-type: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#projects-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "head1 cont1"
+        "head2 cont2";
+    row-gap: 10px;
     color: var(--blue);
 }
 
-.no-decor {
-    list-style-type: none;
+#projects-python-header {
+    grid-area: head1;
+}
+
+#projects-python-content {
+    grid-area: cont1;
+}
+
+#projects-html-header {
+    grid-area: head2;
+}
+
+#projects-html-content {
+    grid-area: cont2;
+}
+
+.projects-header {
+    align-self: center;
+    justify-self: start;
+}
+
+.blue-border-bottom {
+    border-bottom: 1px solid var(--blue);
+}
 }
