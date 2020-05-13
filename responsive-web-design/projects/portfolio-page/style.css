@@ -66,6 +66,7 @@ h3 {
 }
 
 #projects-header {
+    max-height: 20vh;
     width: 100%;
     font-weight: 600;
     font-size: 2em;
@@ -82,14 +83,12 @@ h3 {
 }
 
 #contact-section {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;    
+    min-height: 80vh;
+    width: 100%;    
 }
 
 #contact-header {
+    max-height: 20vh;
     width: 100%;
     font-weight: 600;
     font-size: 2em;
@@ -128,6 +127,27 @@ h3 {
     text-decoration: none;
 }
 
+.content-link {
+    text-decoration: none;
+}
+
+.nav-link:hover, .content-link:hover {
+    animation-name: link-hover;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+.light-blue {
+    color: var(--skyb);
+    text-decoration: underline;
+}
+
+@keyframes link-hover {
+    100% {
+      color: var(--high);  
+    }
+}
+
 .flex-centered {
     justify-content: center;
     align-items: center;    
@@ -147,7 +167,7 @@ h3 {
 .container {
     width: 100%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 #projects-container {
@@ -177,7 +197,7 @@ h3 {
     grid-area: cont2;
 }
 
-.projects-header {
+.content-header {
     align-self: center;
     justify-self: start;
 }
@@ -185,4 +205,57 @@ h3 {
 .blue-border-bottom {
     border-bottom: 1px solid var(--blue);
 }
+
+#contacts-container {
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "head cont1"
+        "head cont2";
+    color: var(--blue);
+}
+
+#contacts-content-header {
+    grid-area: head;
+
+}
+
+#contacts-content-github {
+    grid-area: cont1;
+    align-self: end;
+    justify-self: center;
+}
+
+#contacts-content-twitter {
+    grid-area: cont2;
+    align-self: start;
+    justify-self: center;
+}
+
+#contacts-content-mail {
+    grid-area: cont3;
+}
+
+.fa {
+    font-size: 2em;
+    color: var(--blue);
+}
+
+.fa-heart {
+    font-size: 1em;
+    color: var(--high);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--blue);
+    height: 10vh;
+    min-height: 10vh;
+}
+
+footer > p {
+    color: var(--lite);
+    text-align: center;
 }
