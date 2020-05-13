@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Macniven</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/614955068f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <nav id="navbar">
@@ -36,41 +37,41 @@
         <header id="projects-header" class="flex-centered">
             <h2>Projects</h2>
         </header>
-        <div id="projects-content" class="content">
-            <div class="section-item">
+        <div id="projects-container" class="container">
+            <div id="projects-python-header" class="content-header">
                 <h3>Python</h3>
+            </div>
+            <div id="projects-python-content" class="blue-border-bottom">
                 <ul class="no-decor">
                     <li>
-                        <h4>shushi<h4></h4>
+                        <h4>shushi</h4>
                         <p>
                             Minimalist secrets management in Python for Windows.
-                        </p>
-                        <p>
+                            <br><br>
                             Shushi was built to address the need for a one-stop storage location for sensitive data.
                             Instead of having your credentials scattered across your projects in multiple config files, 
                             Shushi offers an encrypted vault with access via a CLI application and an API.
-                        </p>
-                        <p>
-                            Check out the <a href="https://github.com/alexmacniven/shushi">Github repository</a>
+                            <br><br>
+                            Check out the <a class="content-link light-blue" href="https://github.com/alexmacniven/shushi">Github repository</a>
                         </p>
                     </li>
                 </ul>
             </div>
-            <div class="section-item">
+            <div id="projects-html-header" class="projects-header">
                 <h3>HTML and CSS</h3>
+            </div>
+            <div id="projects-html-content">
                 <ul class="no-decor">
                     <li>
                         <h4>Portfolio Website</h4>
                         <p>
                             My portfolio website / landing page.
-                        </p>
-                        <p>
+                            <br><br>
                             This webiste was developed whilst completing the Responsive Web Design certifcate provided by freecodecamp.
-                        </p>
-                        <p>
+                            <br><br>
                             Read more about on the 
-                            <a href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-personal-portfolio-webpage">project page</a> 
-                            and check out the <a href="#">Github repository</a>
+                            <a class="content-link light-blue" href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-personal-portfolio-webpage">project page</a> 
+                            and check out the <a class="content-link light-blue" href="#">Github repository</a>
                         </p>
                     </li>
                 </ul>
@@ -81,10 +82,32 @@
         <header id="contact-header" class="flex-centered">
             <h2>Contact</h2>
         </header>
-        <div id="contact-content" class="content">
-
+        <div id="contacts-container" class="container">
+            <div id="contacts-content-header" class="content-header">
+                <h3>
+                    Follow me.
+                    <br><br>
+                    Say hello.
+                    <br><br>
+                    Get in touch about<br>exciting new projects.
+                </h3>
+            </div>
+            <div id="contacts-content-github">
+                <p><a href="https://github.com/alexmacniven" class="content-link"><i class="fa fa-github"></i>/alexmacniven</a></p>
+            </div>
+            <div id="contacts-content-twitter">
+                <p><a href="https://twitter.com/alex_macniven" class="content-link"><i class="fa fa-twitter"></i>/alex_macniven</a></p>
+            </div>
+            <!--
+            <div id="contacts-content-mail">
+                <p><i class="fa fa-envelope"></i>macniven.ap@gmail.com</p>
+            </div>
+            -->
         </div>
     </section>
+    <footer>
+        <p>Made with <i class="fa fa-heart"></i> by Alex Macniven</p>
+    </footer>
 </main>
 </body>
 </html>
